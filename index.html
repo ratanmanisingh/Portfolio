@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/73c388124c.js" crossorigin="anonymous"></script>
+    <style>
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes floatImage {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                transform: translateY(-15px) scale(1.02);
+            }
+        }
+
+        @keyframes borderGlow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(255, 0, 79, 0.5), 0 0 40px rgba(255, 0, 79, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(255, 0, 79, 0.8), 0 0 60px rgba(255, 0, 79, 0.5);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav class="animate-nav">
+                <img src="Images/logo1.png" class="logo animate-logo">
+                <ul id="sidemenu" class="animate-menu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p class="animate-subtitle">Aspiring Software Developer</p>
+                <h1 class="animate-title">Hi, I'm <span>Ratanmani</span> <br>From India</h1>
+            </div>
+            <div class="header-image animate-image">
+                <img src="Images/bg.jpeg" alt="Profile Picture">
+            </div>
+        </div>
+    </div>
+<!-- -------------- About ---------------- -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1 scroll-animate">
+                    <img src="Images/my_profile_pic.jpg">
+                </div>
+                <div class="about-col-2 scroll-animate">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Aspiring Software Developer | B.Tech in Computer Science
+                        <br><br>
+                        I am pursuing a B.Tech in Computer Science at Lovely Professional University, focusing on data science. I have a strong foundation in Python, C, C++, Java, R, and Data Structures and Algorithms, gained through coursework and personal projects.
+                        
+                        Passionate about solving real-world challenges, I am dedicated to using data science to drive innovation and make a positive impact. I am eager to continue growing my expertise and contributing to meaningful projects in this dynamic field.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab id " id="skills">
+                        <ul>
+                            <li><span>Data Science</span><br>Fundamental Data Science Knowledge</li>
+                            <li><span>Web Development</span><br>Web Development</li>
+                            <li><span>Digital Marketing</span><br>Basic Digital Marketing Knowledge</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>B-Tech in Computer Science and Engineering &emsp;[2022-2026]</span><br> Lovely Professional University</li>
+                            <li><span>Intermediate &emsp; [2022]</span><br> D.A.V P.G College </li>
+                            <li><span>High School &emsp; [2020]</span><br> D.V.M Public School </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------- services -------------- -->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title scroll-animate">My Services</h1>
+            <div class="services-list">
+                <div class="scroll-animate" style="animation-delay: 0.1s;">
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>With a strong background in front-end development, I create dynamic, responsive web applications that prioritize user experience and performance. I excel in translating design mockups into functional, interactive interfaces and ensuring seamless integration with back-end systems. My expertise in modern web design principles and tools enables me to deliver high-quality, scalable solutions that enhance user engagement and drive business growth.</p>
+                    <!-- <a href="#">Learn more</a> -->
+                </div>
+                <div class="scroll-animate" style="animation-delay: 0.2s;">
+                    <!-- <i class="fa-solid fa-crop"></i> -->
+                    <i class="fa-solid fa-database"></i>
+                    <h2>Data Science </h2>
+                    <p>Basic knowledge of R and Python for data analysis and visualization. Proficient in Excel for data manipulation and Tableau for creating interactive dashboards and reports. Experienced in data preprocessing, exploratory analysis, and generating insights from data.Familiar with data preprocessing, exploratory data analysis, and basic machine learning concepts.</p>
+                    <!-- <a href="#">Learn more</a> -->
+                </div>
+                <div class="scroll-animate" style="animation-delay: 0.3s;">
+                    <!-- <i class="fa-brands fa-app-store-ios"></i> -->
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    <h2>Digital Marketing </h2>
+                    <p>I am beginner in digital marketing, I have foundational knowledge of key areas such as search engine optimization (SEO), social media marketing, and email marketing. I am familiar with basic tools and strategies for improving online visibility, creating engaging content, and analyzing performance metrics. Currently learning how to implement effective digital marketing campaigns and leverage analytics to drive growth and optimize results. Committed to expanding my skills and staying updated with industry trends.</p>
+                    <!-- <a href="#">Learn more</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- -------------- Portfolio -------------- -->
+
+<div id="portfolio">
+    <div class="container">
+        <div class="sub-title scroll-animate">My Work</div>
+        <div class="work-list">
+            <div class="work scroll-animate" style="animation-delay: 0.1s;">
+                <img src="Images/work-1.png" alt="Snake Game">
+                <div class="layer">
+                    <h3>Snake Game</h3>
+                    <p>Developed an interactive Snake game using HTML, CSS, and JavaScript.</p>
+                    <a href="https://navneetsingh04.github.io/Snake-Game/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work scroll-animate" style="animation-delay: 0.2s;">
+                <img src="Images/work-2.png" alt="Banking Management System">
+                <div class="layer">
+                    <h3>Banking Management System</h3>
+                    <p>Developed a terminal-based Banking Management System using Java, JDBC, and MySQL.</p>
+                    <a href="https://github.com/Navneetsingh04/Banking-System"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work scroll-animate" style="animation-delay: 0.3s;">
+                <img src="Images/work-3.png" alt="Tic-Tac-Toe Game">
+                <div class="layer">
+                    <h3>Tic-Tac-Toe Game</h3>
+                    <p>A classic Tic-Tac-Toe game built with HTML and CSS.</p>
+                    <a href="https://navneetsingh04.github.io/TicTacToe/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>            
+        </div>
+        <a href="https://github.com/Navneetsingh04" class="btn">See more</a>
+    </div>
+</div>
+<!-- -------------- contact-form -------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left scroll-animate">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>ratanmanisingh553@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>+91-9708654585</p>
+                <div class="social-icon">
+                <a href="https://github.com/Navneetsingh04"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/navneetsingh04/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://discord.com/invite/jEj2Erux"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://x.com/Navneetsingh041"><i class="fa-brands fa-x-twitter"></i></i></a>
+                
+                </div>
+                <a href="Images/Resume.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right scroll-animate">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your email-id" required>
+                    <textarea name="Message" rows="" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright ©️ 2025 RatanmaniSingh</p>
+    </div>
+</div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby5XGiMq3AxuT9fCUWQZgJBfYYoZbOEIIIakhIPhBu_AE_eLAyyg6FwV3vVh0cUF_SWYQ/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById('msg')
+        
+        // Scroll Animation Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all scroll-animate elements
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
+        });
+
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
